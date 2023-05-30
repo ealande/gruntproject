@@ -33,15 +33,19 @@ module.exports = function(grunt) {
                         {
                             match: 'CSS_ADDRESS',
                             replacement: './styles/main.css'
+                        },
+                        {
+                            match: 'JS_ADDRESS',
+                            replacement: '../src/scripts/main.js'
                         }
                     ]
                 },
                 files: [
                     {
                         expand: true,
-                        flatter: true,
+                        flatten: true,
                         src: ['src/index.html'],
-                        dest: './dev/'
+                        dest: 'dev/'
                     }
                 ]
             },
@@ -57,7 +61,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        flatter: true,
+                        flatten: true,
                         src: ['prebuild/index.html'],
                         dest: 'dist/'
                     }

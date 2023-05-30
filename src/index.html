@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=width-device, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Lobster&family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -13,13 +13,18 @@
     <body>
         <main>
             <h1>Raffle</h1>
-                <form action="">
+                <form id="form-raffle">
                     <div>
                         <label for="max-number">Max Number</label>
-                        <input type="number" id="maxNumber">
+                        <input type="number" id="maxNumber" required min="2" value="2" step="1">
                     </div>
                     <button type="submit">Raffle a number</button>
                 </form>
+                <div class="result">
+                    The choose number is: <span id="valueResult"></span>
+                </div>
         </main>
-    </body>    
+
+        <script src="@@JS_ADDRESS"></script>
+    </body> 
 </html>
